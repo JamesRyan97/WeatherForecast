@@ -16,6 +16,9 @@ import com.bumptech.glide.Glide;
 import com.jrcoder.weatherforecast.models.weather.CurrentWeather;
 import com.jrcoder.weatherforecast.retrofit2.RetrofitClient;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 /**
  * Implementation of App Widget functionality.
  */
@@ -39,7 +42,7 @@ public class WeatherWidget extends AppWidgetProvider {
             @Override
             public void onCurrentWeatherCompleted(@Nullable CurrentWeather currentWeather, @NonNull String message) {
                 if(currentWeather != null){
-                    Log.d("CheckApp", currentWeather.getName());
+                    SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
                     final RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.weather_widget);
                     views.setTextViewText(R.id.tvLocationName, currentWeather.getName());
                     views.setTextViewText(R.id.tvSunsetTime, currentWeather.getSys().getTime(true));
@@ -48,6 +51,8 @@ public class WeatherWidget extends AppWidgetProvider {
                     views.setTextViewText(R.id.tvHumidity, String.format(context.getResources().getString(R.string.humidity),currentWeather.getMain().getHumidity()) + "%");
                     views.setTextViewText(R.id.tvWeatherName, currentWeather.getWeather().get(0).getDescription());
                     views.setTextViewText(R.id.tvTemperature,String.valueOf((int)currentWeather.getMain().getTemp()));
+                    views.setTextViewText(R.id.tvTimeUpdate,String.format(context.getString(R.string.time_update), dateFormat.format(Calendar.getInstance().getTime())));
+                    views.setImageViewResource(R.id.imvWeather, currentWeather.getWeather().get(0).getDrawableID());
                     // Instruct the widget manager to update the widget
                     appWidgetManager.updateAppWidget(appWidgetId, views);
                 }

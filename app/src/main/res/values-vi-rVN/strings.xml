@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WeatherForecast</string>
+    <string name="humidity">Độ ẩm %d</string>
+    <string name="d_day_forecast">Dự báo %d ngày tiếp theo</string>
+    <string name="add_widget">Thêm tiện ích</string>
+    <string name="time_update">(Cập nhật lúc: %s)</string>
+    <string name="sunrise">Bình minh</string>
+    <string name="wind">Tốc độ gió</string>
+    <string name="sunset">Hoàng hôn</string>
+</resources>

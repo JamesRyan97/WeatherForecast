@@ -6,18 +6,23 @@
     android:theme="@style/ThemeOverlay.WeatherForecast.AppWidgetContainer">
 
     <LinearLayout
-        android:padding="@dimen/widget_padding_main"
+        android:layout_margin="3dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_white_30">
 
         <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
+                android:drawableStart="@drawable/ic_baseline_location_on_18_white"
+                android:drawablePadding="3dp"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:layout_toStartOf="@id/imvRefresh"
@@ -40,6 +45,8 @@
         </RelativeLayout>
 
         <LinearLayout
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -59,9 +66,21 @@
                 android:src="@drawable/sunny_light"
                 android:scaleType="fitXY"/>
 
+            <TextView
+                android:textAlignment="center"
+                android:id="@+id/tvTimeUpdate"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="@string/time_update"
+                android:textColor="@color/white"/>
+
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -94,6 +113,8 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -113,7 +134,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sunrise"
+                    android:text="@string/sunrise"
                     android:textColor="@color/white"
                     android:textSize="13sp"/>
 
@@ -141,7 +162,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Wind"
+                    android:text="@string/wind"
                     android:textColor="@color/white"
                     android:textSize="13sp"/>
 
@@ -169,7 +190,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sunset"
+                    android:text="@string/sunset"
                     android:textColor="@color/white"
                     android:textSize="13sp"/>
 
@@ -186,8 +207,11 @@
         </LinearLayout>
 
         <TextView
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
             android:id="@+id/tvHumidity"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:textAlignment="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

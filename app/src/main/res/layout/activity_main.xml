@@ -32,6 +32,7 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <LinearLayout
                 android:paddingTop="10dp"
                 android:paddingBottom="20dp"
@@ -46,6 +47,8 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_white"
                     android:layout_marginStart="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
                     android:layout_marginEnd="20dp">
 
                     <RelativeLayout
@@ -54,6 +57,8 @@
                         android:orientation="horizontal">
 
                         <com.elyeproj.loaderviewlibrary.LoaderTextView
+                            android:drawableStart="@drawable/ic_baseline_location_on_18_white"
+                            android:drawablePadding="3dp"
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
                             android:layout_toStartOf="@id/imvRefresh"
@@ -63,7 +68,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
-                            android:textColor="@color/text_gray"/>
+                            android:textColor="@color/white"/>
 
                         <ImageView
                             android:scaleType="center"
@@ -88,13 +93,14 @@
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:text="Sunny"
-                            android:textColor="@color/text_gray"/>
+                            android:textColor="@color/white"/>
 
                         <ImageView
+                            android:layout_marginStart="5dp"
                             android:id="@+id/imvWeather"
-                            android:layout_width="44dp"
-                            android:layout_height="44dp"
-                            android:src="@drawable/sunny"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/icon_01n"
                             android:scaleType="fitXY"/>
 
                     </LinearLayout>
@@ -111,7 +117,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="38sp"
                             android:text="32"
-                            android:textColor="@color/text_gray"/>
+                            android:textColor="@color/white"/>
                         <TextView
                             android:layout_marginStart="4dp"
                             android:layout_marginEnd="2dp"
@@ -121,7 +127,7 @@
                             android:layout_height="match_parent"
                             android:text="o"
                             android:textSize="20sp"
-                            android:textColor="@color/text_gray"/>
+                            android:textColor="@color/white"/>
                         <TextView
                             android:gravity="top"
                             android:textStyle="bold"
@@ -129,7 +135,7 @@
                             android:layout_height="match_parent"
                             android:text="C"
                             android:textSize="25sp"
-                            android:textColor="@color/text_gray"/>
+                            android:textColor="@color/white"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -147,13 +153,13 @@
                             <ImageView
                                 android:layout_width="28dp"
                                 android:layout_height="28dp"
-                                android:src="@drawable/sunrise"/>
+                                android:src="@drawable/sunrise_white"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Sunrise"
-                                android:textColor="@color/text_gray"
+                                android:text="@string/sunrise"
+                                android:textColor="@color/white"
                                 android:textSize="13sp"/>
 
                             <com.elyeproj.loaderviewlibrary.LoaderTextView
@@ -161,7 +167,7 @@
                                 android:id="@+id/tvSunriseTime"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/text_gray"
+                                android:textColor="@color/white"
                                 android:textSize="15sp"/>
 
                         </LinearLayout>
@@ -176,13 +182,13 @@
                             <ImageView
                                 android:layout_width="28dp"
                                 android:layout_height="28dp"
-                                android:src="@drawable/windy"/>
+                                android:src="@drawable/windy_light"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Wind"
-                                android:textColor="@color/text_gray"
+                                android:text="@string/wind"
+                                android:textColor="@color/white"
                                 android:textSize="13sp"/>
 
                             <com.elyeproj.loaderviewlibrary.LoaderTextView
@@ -190,7 +196,7 @@
                                 android:id="@+id/tvWind"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/text_gray"
+                                android:textColor="@color/white"
                                 android:textSize="15sp"/>
 
                         </LinearLayout>
@@ -205,13 +211,13 @@
                             <ImageView
                                 android:layout_width="28dp"
                                 android:layout_height="28dp"
-                                android:src="@drawable/sunset"/>
+                                android:src="@drawable/sunset_white"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Sunset"
-                                android:textColor="@color/text_gray"
+                                android:text="@string/sunset"
+                                android:textColor="@color/white"
                                 android:textSize="13sp"/>
 
                             <com.elyeproj.loaderviewlibrary.LoaderTextView
@@ -220,7 +226,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text=""
-                                android:textColor="@color/text_gray"
+                                android:textColor="@color/white"
                                 android:textSize="15sp"/>
 
                         </LinearLayout>
@@ -233,8 +239,8 @@
                         android:textAlignment="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/humidity"
-                        android:textColor="@color/text_gray"
+                        android:text="Humidity"
+                        android:textColor="@color/white"
                         android:textSize="15sp"/>
 
                 </LinearLayout>
@@ -248,7 +254,7 @@
                     android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/d_day_forecast"
+                    android:text="Forecast next 5 days"
                     android:textSize="15sp"
                     android:textColor="@color/dark_blue"/>
 

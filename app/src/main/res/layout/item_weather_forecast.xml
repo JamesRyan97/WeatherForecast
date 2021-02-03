@@ -12,7 +12,7 @@
         android:layout_centerVertical="true"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@drawable/bg_circle_white"
+        android:background="@drawable/bg_circle_dark_blue"
         android:src="@drawable/rain"/>
 
     <LinearLayout
