@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="7dp"
+    android:layout_marginBottom="7dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imvWeather"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_circle_white"
+        android:src="@drawable/rain"/>
+
+    <LinearLayout
+        android:layout_toStartOf="@id/tvTemperature"
+        android:layout_toEndOf="@id/imvWeather"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvWeatherName"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rain"
+            android:textSize="16sp"
+            android:textColor="@color/dark_blue"/>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yesterday, 12 Aug 2020"
+            android:textSize="14sp"
+            android:textColor="@color/text_gray"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/term_max_term_min"
+        android:textSize="16sp"
+        android:textColor="@color/dark_blue"/>
+
+</RelativeLayout>

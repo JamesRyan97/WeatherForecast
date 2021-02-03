@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeatherForecast</string>
+    <string name="API_KEY" translatable="false">312fa029f932e45a1050f7cbac5bcc2d</string>
+    <string name="humidity">Humidity %d</string>
+    <string name="term_max_term_min">%d°/%d°</string>
+    <string name="d_day_forecast">Forecast next %d days</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+</resources>
